@@ -1,0 +1,13 @@
+# Test 1: baseline - el working set cabe en la memoria fisica por defecto (256KB = 64 frames).
+# Se esperan exactamente 4 fallos (uno por cada pagina nueva) y 0 reemplazos.
+alloc 16384
+write 0 1
+write 4096 2
+write 8192 3
+write 12288 4
+read 0
+read 4096
+read 8192
+read 12288
+read 0
+read 4096

@@ -1,0 +1,73 @@
+# Test 3: localidad temporal con --phys-mem=256K (64 frames).
+# Se accede recientemente a las paginas 0 y 1 antes de cargar la pagina 64.
+# FIFO expulsa la mas antigua (pagina 0), mientras LRU conserva las calientes.
+alloc 266240
+write 0 1
+write 4096 1
+write 8192 1
+write 12288 1
+write 16384 1
+write 20480 1
+write 24576 1
+write 28672 1
+write 32768 1
+write 36864 1
+write 40960 1
+write 45056 1
+write 49152 1
+write 53248 1
+write 57344 1
+write 61440 1
+write 65536 1
+write 69632 1
+write 73728 1
+write 77824 1
+write 81920 1
+write 86016 1
+write 90112 1
+write 94208 1
+write 98304 1
+write 102400 1
+write 106496 1
+write 110592 1
+write 114688 1
+write 118784 1
+write 122880 1
+write 126976 1
+write 131072 1
+write 135168 1
+write 139264 1
+write 143360 1
+write 147456 1
+write 151552 1
+write 155648 1
+write 159744 1
+write 163840 1
+write 167936 1
+write 172032 1
+write 176128 1
+write 180224 1
+write 184320 1
+write 188416 1
+write 192512 1
+write 196608 1
+write 200704 1
+write 204800 1
+write 208896 1
+write 212992 1
+write 217088 1
+write 221184 1
+write 225280 1
+write 229376 1
+write 233472 1
+write 237568 1
+write 241664 1
+write 245760 1
+write 249856 1
+write 253952 1
+write 258048 1
+read 0
+read 4096
+write 262144 1
+read 0
+read 4096
